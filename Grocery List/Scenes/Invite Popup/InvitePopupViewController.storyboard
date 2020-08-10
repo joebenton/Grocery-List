@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Kl-Hj-bUB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invite Popup View Controller-->
+        <scene sceneID="4fV-HQ-qDp">
+            <objects>
+                <viewController id="2Kl-Hj-bUB" customClass="InvitePopupViewController" customModule="Zen_Grocery_List" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nB-gH-75J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-hd-wcY">
+                                <rect key="frame" x="20" y="330" width="374" height="236"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yRx-Gh-5tl">
+                                        <rect key="frame" x="15" y="20" width="344" height="196"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Invite" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1G-Ff-xRG">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="zenBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have been invited to join a list. Do you want to accept this invite?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U8-K7-tg1">
+                                                <rect key="frame" x="0.0" y="34" width="344" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" name="zenBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8JV-qK-krv">
+                                                <rect key="frame" x="0.0" y="80" width="344" height="20"/>
+                                            </activityIndicatorView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-QM-yrt">
+                                                <rect key="frame" x="0.0" y="110" width="344" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="6EK-Bi-pU9"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oBI-5H-C5D">
+                                                <rect key="frame" x="0.0" y="140" width="344" height="56"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHh-SF-icg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="56"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW7-nM-KBh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="56"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="56" id="I76-uQ-cFB"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Cancel">
+                                                                    <color key="titleColor" name="zenGrey"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cancelBtnPressed:" destination="2Kl-Hj-bUB" eventType="touchUpInside" id="G8g-ZP-g7b"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="PW7-nM-KBh" firstAttribute="top" secondItem="fHh-SF-icg" secondAttribute="top" id="8FW-be-W5h"/>
+                                                            <constraint firstAttribute="bottom" secondItem="PW7-nM-KBh" secondAttribute="bottom" id="ABl-bG-JFd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="PW7-nM-KBh" secondAttribute="trailing" id="bpn-fa-rYQ"/>
+                                                            <constraint firstItem="PW7-nM-KBh" firstAttribute="leading" secondItem="fHh-SF-icg" secondAttribute="leading" id="iBi-PY-o11"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-d0-X3V">
+                                                        <rect key="frame" x="137.5" y="0.0" width="206.5" height="56"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="999" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-Ic-MZt" customClass="LoadingButton" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="56"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="56" id="BTf-yN-enz"/>
+                                                                </constraints>
+                                                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <state key="normal" title="Accept Invite"/>
+                                                                <connections>
+                                                                    <action selector="acceptBtnPressed:" destination="2Kl-Hj-bUB" eventType="touchUpInside" id="GaJ-Ok-dhb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="3Se-Ic-MZt" secondAttribute="trailing" id="AxI-PN-qCB"/>
+                                                            <constraint firstItem="3Se-Ic-MZt" firstAttribute="top" secondItem="sbO-d0-X3V" secondAttribute="top" id="a2P-l1-RUq"/>
+                                                            <constraint firstItem="3Se-Ic-MZt" firstAttribute="leading" secondItem="sbO-d0-X3V" secondAttribute="leading" id="bOT-MY-9Sc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="3Se-Ic-MZt" secondAttribute="bottom" id="qFf-R8-o74"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="sbO-d0-X3V" firstAttribute="width" secondItem="oBI-5H-C5D" secondAttribute="width" multiplier="0.6" id="pbD-Nc-4FJ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="zenBgWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yRx-Gh-5tl" firstAttribute="leading" secondItem="IuZ-hd-wcY" secondAttribute="leading" constant="15" id="DlU-Ct-vZt"/>
+                                    <constraint firstAttribute="bottom" secondItem="yRx-Gh-5tl" secondAttribute="bottom" constant="20" id="hIw-el-5Ge"/>
+                                    <constraint firstAttribute="trailing" secondItem="yRx-Gh-5tl" secondAttribute="trailing" constant="15" id="q1E-Qo-g8N"/>
+                                    <constraint firstItem="yRx-Gh-5tl" firstAttribute="top" secondItem="IuZ-hd-wcY" secondAttribute="top" constant="20" id="uJm-GX-tlG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.39525363869863012" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IuZ-hd-wcY" firstAttribute="leading" secondItem="3Jw-x6-kxh" secondAttribute="leading" constant="20" id="Tb4-lK-dV5"/>
+                            <constraint firstItem="IuZ-hd-wcY" firstAttribute="centerY" secondItem="6nB-gH-75J" secondAttribute="centerY" id="cfl-MV-Noq"/>
+                            <constraint firstItem="IuZ-hd-wcY" firstAttribute="centerX" secondItem="6nB-gH-75J" secondAttribute="centerX" id="pSd-Ki-6Ey"/>
+                            <constraint firstItem="3Jw-x6-kxh" firstAttribute="trailing" secondItem="IuZ-hd-wcY" secondAttribute="trailing" constant="20" id="zhS-9K-9Hg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Jw-x6-kxh"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="acceptBtn" destination="3Se-Ic-MZt" id="OCr-nl-IUM"/>
+                        <outlet property="cancelBtn" destination="PW7-nM-KBh" id="MyI-0a-hxS"/>
+                        <outlet property="labelText" destination="3U8-K7-tg1" id="YnS-eb-aSF"/>
+                        <outlet property="loadingIndicator" destination="8JV-qK-krv" id="YNb-W7-0jP"/>
+                        <outlet property="popupView" destination="IuZ-hd-wcY" id="y6u-69-gMi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3I-34-FcK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="zenBgWhite">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.99000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenBlack">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenGrey">
+            <color red="0.70999997854232788" green="0.69999998807907104" blue="0.69999998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

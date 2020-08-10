@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_swipe_share.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

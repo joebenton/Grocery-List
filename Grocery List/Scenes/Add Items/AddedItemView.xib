@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddedItemView" customModule="Zen_Grocery_List" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="zU3-Y9-QRd"/>
+                <outlet property="itemNameLabel" destination="p8O-N5-LOZ" id="ban-cv-hCQ"/>
+                <outlet property="quantityStepperView" destination="e7K-Af-CUF" id="ckJ-zz-Dvk"/>
+                <outlet property="unitStepperView" destination="uoc-Ap-661" id="ycr-W3-J9m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-d8-M7R">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVp-Yo-uvQ">
+                            <rect key="frame" x="0.0" y="0.0" width="264" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Item Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-N5-LOZ">
+                                    <rect key="frame" x="0.0" y="7" width="264" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="zenBlack"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="p8O-N5-LOZ" firstAttribute="top" secondItem="xVp-Yo-uvQ" secondAttribute="top" constant="7" id="Fvh-5c-96S"/>
+                                <constraint firstAttribute="trailing" secondItem="p8O-N5-LOZ" secondAttribute="trailing" id="Sz7-Ri-elk"/>
+                                <constraint firstItem="p8O-N5-LOZ" firstAttribute="leading" secondItem="xVp-Yo-uvQ" secondAttribute="leading" id="cJv-ih-NCE"/>
+                                <constraint firstAttribute="bottom" secondItem="p8O-N5-LOZ" secondAttribute="bottom" constant="-7" id="keC-jc-NEa"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4D-ah-Rr1">
+                            <rect key="frame" x="264" y="0.0" width="150" height="70"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-Av-V0M">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7K-Af-CUF" customClass="StepperView" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="35"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="nKn-jl-Wlc"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-Ap-661" customClass="StepperView" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="35" width="150" height="35"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="MiF-tB-d9E"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="qWf-dk-jP0"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="WcW-Av-V0M" secondAttribute="trailing" id="9UT-Up-C2f"/>
+                                <constraint firstItem="WcW-Av-V0M" firstAttribute="top" secondItem="L4D-ah-Rr1" secondAttribute="top" id="Ag6-Qu-q34"/>
+                                <constraint firstItem="WcW-Av-V0M" firstAttribute="leading" secondItem="L4D-ah-Rr1" secondAttribute="leading" id="U7n-V7-fh0"/>
+                                <constraint firstAttribute="bottom" secondItem="WcW-Av-V0M" secondAttribute="bottom" id="dMl-6p-WkG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PEd-d8-M7R" secondAttribute="bottom" id="azu-wS-Y2E"/>
+                <constraint firstItem="PEd-d8-M7R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="c7a-uI-KRf"/>
+                <constraint firstItem="PEd-d8-M7R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kId-xJ-4RL"/>
+                <constraint firstAttribute="trailing" secondItem="PEd-d8-M7R" secondAttribute="trailing" id="rNt-Q9-rtc"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ITq-zK-IfY"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="zenBlack">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

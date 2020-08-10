@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFp-6I-vvR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Category-->
+        <scene sceneID="MlS-lu-Pmr">
+            <objects>
+                <viewController id="fFp-6I-vvR" customClass="ListsCategoryViewController" customModule="Zen_Grocery_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Vk-yn-GeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-YT-IVq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" rowHeight="72" id="KAW-8m-DBN" customClass="ListCell" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KAW-8m-DBN" id="lhk-a1-E6q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3o5-sh-l27">
+                                                    <rect key="frame" x="15" y="8" width="384" height="56"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E8o-WI-8Mt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="56"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-dj-0IS">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="8" height="56"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="8" id="LuY-qi-cGl"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="List Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-hL-9H0">
+                                                                    <rect key="frame" x="16" y="0.0" width="301" height="56"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <color key="textColor" name="zenBlack"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Items" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOS-dw-UZ5">
+                                                                    <rect key="frame" x="325" y="0.0" width="45" height="56"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <color key="textColor" name="zenGrey"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="iSV-dq-saB"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="E8o-WI-8Mt" secondAttribute="bottom" id="EBS-Sm-jec"/>
+                                                        <constraint firstItem="E8o-WI-8Mt" firstAttribute="leading" secondItem="3o5-sh-l27" secondAttribute="leading" id="nID-YA-pPi"/>
+                                                        <constraint firstItem="E8o-WI-8Mt" firstAttribute="top" secondItem="3o5-sh-l27" secondAttribute="top" id="tAf-Qp-jbg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="E8o-WI-8Mt" secondAttribute="trailing" constant="14" id="tXI-YP-0V1"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="3o5-sh-l27" firstAttribute="leading" secondItem="lhk-a1-E6q" secondAttribute="leading" constant="15" id="cZY-Yu-bMs"/>
+                                                <constraint firstAttribute="bottom" secondItem="3o5-sh-l27" secondAttribute="bottom" constant="8" id="dBj-fh-vDC"/>
+                                                <constraint firstAttribute="trailing" secondItem="3o5-sh-l27" secondAttribute="trailing" constant="15" id="sZZ-fl-gb3"/>
+                                                <constraint firstItem="3o5-sh-l27" firstAttribute="top" secondItem="lhk-a1-E6q" secondAttribute="top" constant="8" id="wOO-US-RAF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="colourBar" destination="LNd-dj-0IS" id="kBX-hK-6kZ"/>
+                                            <outlet property="itemsCountLabel" destination="BOS-dw-UZ5" id="Qty-kG-cBf"/>
+                                            <outlet property="nameLabel" destination="BC1-hL-9H0" id="vtB-ev-ITW"/>
+                                            <outlet property="wrapperView" destination="3o5-sh-l27" id="5qv-lA-ZAM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fFp-6I-vvR" id="cfO-eD-KRn"/>
+                                    <outlet property="delegate" destination="fFp-6I-vvR" id="avf-Df-uBg"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mfF-rL-Zur">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" name="zenBlack"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no lists in this category." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4y-TZ-Obf">
+                                <rect key="frame" x="15" y="438" width="384" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="zenGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="zenBgWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IxK-YT-IVq" secondAttribute="bottom" id="6dU-1d-4Za"/>
+                            <constraint firstItem="z4y-TZ-Obf" firstAttribute="leading" secondItem="Qw6-CE-r8Y" secondAttribute="leading" constant="15" id="FB4-fo-ct3"/>
+                            <constraint firstItem="mfF-rL-Zur" firstAttribute="centerX" secondItem="3Vk-yn-GeQ" secondAttribute="centerX" id="WNO-p3-yhD"/>
+                            <constraint firstItem="IxK-YT-IVq" firstAttribute="leading" secondItem="3Vk-yn-GeQ" secondAttribute="leading" id="iTS-fc-JZE"/>
+                            <constraint firstItem="Qw6-CE-r8Y" firstAttribute="trailing" secondItem="z4y-TZ-Obf" secondAttribute="trailing" constant="15" id="jUg-6X-AHe"/>
+                            <constraint firstItem="IxK-YT-IVq" firstAttribute="trailing" secondItem="3Vk-yn-GeQ" secondAttribute="trailing" id="p8j-bO-Kep"/>
+                            <constraint firstItem="z4y-TZ-Obf" firstAttribute="centerY" secondItem="3Vk-yn-GeQ" secondAttribute="centerY" id="pcj-Pm-cCK"/>
+                            <constraint firstItem="mfF-rL-Zur" firstAttribute="centerY" secondItem="3Vk-yn-GeQ" secondAttribute="centerY" id="qcB-MQ-W9E"/>
+                            <constraint firstItem="IxK-YT-IVq" firstAttribute="top" secondItem="Qw6-CE-r8Y" secondAttribute="top" id="uQg-Z7-aDJ"/>
+                            <constraint firstItem="z4y-TZ-Obf" firstAttribute="centerX" secondItem="3Vk-yn-GeQ" secondAttribute="centerX" id="x8u-l7-Pkj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qw6-CE-r8Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="List Category" id="HJm-a3-gFt"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emptyLabel" destination="z4y-TZ-Obf" id="btA-ke-pSm"/>
+                        <outlet property="loadingIndicator" destination="mfF-rL-Zur" id="nDl-8Z-Su2"/>
+                        <outlet property="tableView" destination="IxK-YT-IVq" id="7g3-Jo-Ivk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08l-R4-e3f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="zenBgWhite">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.99000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenBlack">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenGrey">
+            <color red="0.70999997854232788" green="0.69999998807907104" blue="0.69999998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

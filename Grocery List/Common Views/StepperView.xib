@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepperView" customModule="Zen_Grocery_List" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="LnT-RM-ThC"/>
+                <outlet property="leftBtn" destination="zpx-6F-HLz" id="WXx-bM-9vh"/>
+                <outlet property="rightBtn" destination="OkV-Df-fZS" id="cp6-ez-Pie"/>
+                <outlet property="titleBtn" destination="i5q-4e-fvi" id="n6D-J5-qHg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-BM-Hx7">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-6F-HLz">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="5Q0-go-JIu"/>
+                                <constraint firstAttribute="width" constant="45" id="vd8-dW-Uo7"/>
+                            </constraints>
+                            <state key="normal" image="ic_minus"/>
+                            <connections>
+                                <action selector="leftBtnPressed:" destination="-1" eventType="touchUpInside" id="2zW-Xm-eXx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="i5q-4e-fvi">
+                            <rect key="frame" x="45" y="0.0" width="110" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" name="zenBlack"/>
+                            </state>
+                            <connections>
+                                <action selector="titleBtnPressed:" destination="-1" eventType="touchUpInside" id="R78-SZ-gSa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-Df-fZS">
+                            <rect key="frame" x="155" y="0.0" width="45" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="mlv-k4-hck"/>
+                                <constraint firstAttribute="width" constant="45" id="uza-V9-h4e"/>
+                            </constraints>
+                            <state key="normal" image="ic_plus"/>
+                            <connections>
+                                <action selector="rightBtnPressed:" destination="-1" eventType="touchUpInside" id="Iot-Du-0s9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="5eO-BM-Hx7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VFG-7K-wdM"/>
+                <constraint firstItem="5eO-BM-Hx7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XLN-h3-pCH"/>
+                <constraint firstItem="5eO-BM-Hx7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bhD-Q3-Qq8"/>
+                <constraint firstAttribute="bottom" secondItem="5eO-BM-Hx7" secondAttribute="bottom" id="sBX-u1-4JE"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_minus" width="24" height="24"/>
+        <image name="ic_plus" width="24" height="24"/>
+        <namedColor name="zenBlack">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFp-6I-vvR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List-->
+        <scene sceneID="MlS-lu-Pmr">
+            <objects>
+                <viewController id="fFp-6I-vvR" customClass="ListDetailViewController" customModule="Zen_Grocery_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Vk-yn-GeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8hB-5B-Pc8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" name="zenLightGrey"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="EAY-4e-SFV">
+                                    <rect key="frame" x="0.0" y="106" width="414" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flb-Q2-ble" customClass="PrimaryButton" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="20" width="384" height="56"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="56" id="D94-iv-CZ8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="tintColor" name="zenBgWhite"/>
+                                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" image="ic_plus_small">
+                                                <color key="titleColor" name="zenBgWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addMoreItemsBtnPressed:" destination="fFp-6I-vvR" eventType="touchUpInside" id="yBG-bT-eB6"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="flb-Q2-ble" secondAttribute="trailing" constant="15" id="1zZ-j3-36e"/>
+                                        <constraint firstItem="flb-Q2-ble" firstAttribute="top" secondItem="EAY-4e-SFV" secondAttribute="top" constant="20" id="JLP-4a-gdL"/>
+                                        <constraint firstItem="flb-Q2-ble" firstAttribute="leading" secondItem="EAY-4e-SFV" secondAttribute="leading" constant="15" id="p4y-r0-rvm"/>
+                                        <constraint firstAttribute="bottom" secondItem="flb-Q2-ble" secondAttribute="bottom" id="yZG-d7-JDo"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" rowHeight="50" id="Bf9-fT-lRB" customClass="ItemCell" customModule="Zen_Grocery_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bf9-fT-lRB" id="Gty-wP-yGm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-tt-dhh">
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-MK-NDd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="zenBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4P-c6-aBt">
+                                                            <rect key="frame" x="274" y="0.0" width="65" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="zenBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-Y1-afp">
+                                                            <rect key="frame" x="344" y="0.0" width="40" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="Aeh-r9-6ip"/>
+                                                            </constraints>
+                                                            <state key="normal" image="ic_checkbox"/>
+                                                            <connections>
+                                                                <action selector="checkedBtnPressed:" destination="Bf9-fT-lRB" eventType="touchUpInside" id="BW9-2o-69K"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6Lo-P6-fd7"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PYC-tt-dhh" secondAttribute="trailing" constant="15" id="3ZF-av-g4x"/>
+                                                <constraint firstItem="PYC-tt-dhh" firstAttribute="top" secondItem="Gty-wP-yGm" secondAttribute="top" id="Yhk-g9-6zw"/>
+                                                <constraint firstAttribute="bottom" secondItem="PYC-tt-dhh" secondAttribute="bottom" id="cfh-Yb-oPm"/>
+                                                <constraint firstItem="PYC-tt-dhh" firstAttribute="leading" secondItem="Gty-wP-yGm" secondAttribute="leading" constant="15" id="e7T-WP-Dvu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="checkedBtn" destination="CCd-Y1-afp" id="mFm-Ox-JiE"/>
+                                            <outlet property="nameLabel" destination="dhj-MK-NDd" id="B5d-yv-rbU"/>
+                                            <outlet property="qtyLabel" destination="F4P-c6-aBt" id="dJR-cE-WYk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fFp-6I-vvR" id="RfL-3E-Kwv"/>
+                                    <outlet property="delegate" destination="fFp-6I-vvR" id="dry-Fk-YJ1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="zenBgWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8hB-5B-Pc8" secondAttribute="bottom" id="J2g-uh-eze"/>
+                            <constraint firstItem="8hB-5B-Pc8" firstAttribute="top" secondItem="3Vk-yn-GeQ" secondAttribute="top" id="Lw4-aI-ma5"/>
+                            <constraint firstItem="8hB-5B-Pc8" firstAttribute="leading" secondItem="3Vk-yn-GeQ" secondAttribute="leading" id="kKq-tb-t01"/>
+                            <constraint firstItem="8hB-5B-Pc8" firstAttribute="trailing" secondItem="3Vk-yn-GeQ" secondAttribute="trailing" id="pHm-pD-RgP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qw6-CE-r8Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="List" id="VV8-M3-NCa"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="addMoreItemsBtn" destination="flb-Q2-ble" id="0jH-AP-FbQ"/>
+                        <outlet property="tableView" destination="8hB-5B-Pc8" id="Lbn-Qm-yJ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08l-R4-e3f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_checkbox" width="24" height="24"/>
+        <image name="ic_plus_small" width="8" height="9"/>
+        <namedColor name="zenBgWhite">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.99000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenBlack">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zenLightGrey">
+            <color red="0.88999998569488525" green="0.88999998569488525" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
